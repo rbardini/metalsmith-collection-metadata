@@ -1,0 +1,26 @@
+{
+  "name": "metalsmith-collection-metadata",
+  "version": "0.1.0",
+  "description": "A Metalsmith plugin to add metadata to every file in a collection",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbardini/metalsmith-collection-metadata.git"
+  },
+  "keywords": [
+    "metalsmith",
+    "plugin",
+    "collection",
+    "metadata"
+  ],
+  "author": "Rafael Bardini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rbardini/metalsmith-collection-metadata/issues"
+  },
+  "homepage": "https://github.com/rbardini/metalsmith-collection-metadata",
+  "dependencies": {
+    "object-assign": "~4.1.0",
+    "to-function": "~2.0.6"
+  }
+}
