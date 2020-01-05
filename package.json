@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/rbardini/metalsmith-collection-metadata",
   "dependencies": {
-    "object-assign": "~4.1.0",
-    "to-function": "~2.0.6"
+    "object-assign": "^4.1.1",
+    "to-function": "^2.0.6"
   }
 }
