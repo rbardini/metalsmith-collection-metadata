@@ -9,7 +9,7 @@ module.exports = function plugin (opts) {
       var collection
 
       try {
-        collection = toFunction(name)(metadata)
+        collection = toFunction(`collections.${name}`)(metadata)
       } catch (err) {}
 
       if (!collection) {

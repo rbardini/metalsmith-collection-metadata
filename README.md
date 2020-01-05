@@ -30,12 +30,8 @@ metalsmith
     posts: 'posts/*.md'
   }))
   .use(metadata({
-    'collections.pages': {
-      type: 'page'
-    },
-    'collections.posts': {
-      type: 'post'
-    }
+    pages: { type: 'page' },
+    posts: { type: 'post' }
   }))
 ```
 
