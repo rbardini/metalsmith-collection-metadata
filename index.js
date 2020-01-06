@@ -1,23 +1,23 @@
-var assign = require('object-assign')
-var toFunction = require('to-function')
+const assign = require('object-assign')
+const toFunction = require('to-function')
 
-module.exports = function plugin (opts) {
-  return function (files, metalsmith, done) {
-    var metadata = metalsmith.metadata()
+module.exports = (opts) =>
+  (_files, metalsmith, done) => {
+    const metadata = metalsmith.metadata()
 
-    var complete = Object.keys(opts).every(function (name) {
-      var collection
+    const complete = Object.keys(opts).every(name => {
+      let collection
 
       try {
         collection = toFunction(`collections.${name}`)(metadata)
       } catch (err) {}
 
       if (!collection) {
-        done(new TypeError('Collection `' + name + '` not found'))
+        done(new TypeError(`Collection \`${name}\` not found`))
         return false
       }
 
-      collection.forEach(function (file) {
+      collection.forEach(file => {
         assign(file, opts[name])
       })
 
@@ -26,4 +26,3 @@ module.exports = function plugin (opts) {
 
     return complete && done()
   }
-}
